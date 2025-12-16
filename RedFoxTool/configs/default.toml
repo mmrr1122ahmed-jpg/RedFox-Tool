@@ -1,0 +1,72 @@
+# إعدادات RedFoxTool الافتراضية
+
+[general]
+name = "RedFoxTool"
+version = "1.0.0"
+log_level = "info"
+log_file = "/var/log/redfox/redfox.log"
+data_dir = "/usr/share/redfox"
+config_dir = "/etc/redfox"
+
+[scanning]
+default_threads = 20
+default_timeout = 30
+max_retries = 3
+rate_limit = 100
+user_agent = "RedFoxTool/1.0"
+follow_redirects = true
+verify_ssl = false
+timeout = 30
+delay = 0.5
+
+[attack_modes]
+fast = { threads = 50, delay = 0.1, retries = 2 }
+normal = { threads = 20, delay = 0.5, retries = 3 }
+stealth = { threads = 5, delay = 1.0, retries = 5 }
+aggressive = { threads = 100, delay = 0.0, retries = 1 }
+
+[http]
+connection_timeout = 10
+pool_idle_timeout = 90
+pool_max_idle_per_host = 20
+tcp_nodelay = true
+use_rustls = true
+
+[wordlists]
+default_users = "/usr/share/redfox/wordlists/common_users.txt"
+default_passwords = "/usr/share/redfox/wordlists/common_passwords.txt"
+admin_users = "/usr/share/redfox/wordlists/admin_users.txt"
+common_passwords = "/usr/share/redfox/wordlists/common_passwords.txt"
+seclists_path = "/usr/share/seclists"
+rockyou_path = "/usr/share/wordlists/rockyou.txt"
+
+[output]
+default_format = "json"
+save_results = true
+results_dir = "/var/log/redfox/results"
+auto_open = false
+color_output = true
+progress_bar = true
+
+[reporting]
+include_timestamp = true
+include_banner = true
+save_session = true
+auto_open_report = false
+
+[security]
+require_root = false
+allowed_hosts = []
+blocked_hosts = []
+max_request_size = "10MB"
+
+[logging]
+file = "/var/log/redfox/redfox.log"
+max_size = "10MB"
+max_files = 5
+compress = true
+
+[updates]
+auto_check = true
+check_interval = "24h"
+channel = "stable"

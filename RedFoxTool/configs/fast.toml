@@ -1,0 +1,36 @@
+# إعدادات الوضع السريع
+
+[general]
+name = "RedFoxTool - Fast Mode"
+description = "إعدادات للفحص السريع"
+
+[scanning]
+threads = 50
+timeout = 15
+max_retries = 2
+rate_limit = 200
+delay = 0.1
+batch_size = 1000
+
+[http]
+connection_timeout = 5
+pool_idle_timeout = 30
+pool_max_idle_per_host = 50
+
+[optimization]
+use_rayon = true
+use_dashmap = true
+preload_passwords = true
+cache_responses = true
+parallel_processing = true
+
+[limits]
+max_users = 1000
+max_passwords = 10000
+max_total_attempts = 10000000
+max_memory = "2GB"
+
+[performance]
+min_speed = "1000 req/sec"
+target_speed = "5000 req/sec"
+max_concurrent = 100

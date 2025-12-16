@@ -1,0 +1,29 @@
+# إعدادات Clippy
+doc-valid-idents = ["RedFox", "URL", "HTTP", "HTTPS"]
+avoid-breaking-exported-api = false
+disallowed-methods = []
+disallowed-types = []
+disallowed-scripts = []
+msrv = "1.70"
+
+# التكوينات المخصصة
+allow = [
+    "module_inception",
+    "new_without_default",
+    "too_many_arguments",
+    "missing_errors_doc",
+]
+
+warn = [
+    "clippy::all",
+    "clippy::pedantic",
+    "clippy::nursery",
+    "clippy::cargo",
+]
+
+deny = [
+    "clippy::unwrap_used",
+    "clippy::expect_used",
+    "clippy::panic",
+    "clippy::unreachable",
+]

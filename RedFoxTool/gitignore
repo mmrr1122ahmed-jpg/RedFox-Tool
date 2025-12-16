@@ -1,0 +1,37 @@
+# ملفات التجميع
+/target/
+**/*.rs.bk
+
+# ملفات Cargo
+Cargo.lock
+
+# ملفات نظام التشغيل
+.DS_Store
+Thumbs.db
+
+# ملفات IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ملفات النتائج
+/outputs/
+/results/
+*.log
+*.html
+*.json
+*.csv
+*.xml
+
+# ملفات الجلسات
+/.sessions/
+
+# ملفات الاختبار
+/coverage/
+*.profdata
+*.profraw
+
+# ملفات النسخ الاحتياطي
+*.bak
+*.backup
